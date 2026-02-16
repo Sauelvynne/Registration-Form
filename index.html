@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration Form</title>
+        <link rel="stylesheet" href="regstyles.css">
+    </head>
+
+    <body>
+        <form class="container">
+
+            <!-- LEFT BOX -->
+            <div class="left">
+                <h2>General Information</h2>
+
+                <div class="row">
+                    <input type="text" onkeydown="isInputLetter(event)" placeholder="First name">
+                    <input type="text" placeholder="Last name">
+                </div>
+
+                <input type="text" placeholder="Username">
+
+                <div class="gender">
+                    Gender:
+                    <label><input type="radio" name="gender"> Male</label>
+                    <label><input type="radio" name="gender"> Female</label>
+                    <label><input type="radio" name="gender"> Other</label>
+                </div>
+
+                <input type="text" id="birthdate" placeholder="Birthdate: MM/DD/YYYY" maxlength="10">
+
+                <input type="password" placeholder="Password" id="password" required>
+                <input type="password" placeholder="Confirm Password" id="confirm_password" required>
+ 
+                </div>
+            </div>
+
+            <!-- RIGHT BOX -->
+            <div class="right">
+                <h2>Contact Details</h2>
+
+                <input type="text" placeholder="Address">
+
+                <div class="row">
+                <input type="text" placeholder="Country">
+                <input type="text" placeholder="Zip Code">
+                </div>
+
+
+                <div class="row">
+                <input type="text" placeholder="Code +">
+                <input type="text" placeholder="Phone Number">
+                </div>
+
+                <input type="email" placeholder="Your Email">
+
+                <div class="checkbox">
+                <label>
+                    <input type="checkbox"> I accept the Terms and Conditions
+                </label>
+                <label>
+                    <input type="checkbox"> Receive Notifications and Offers
+                </label>
+                </div>
+
+                <button type="submit">Register</button>
+            </div>
+
+        </form>
+
+    <script src="regscript.js"></script>
+
+    </body>
+</html>
