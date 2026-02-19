@@ -13,56 +13,55 @@
                 <h2>General Information</h2>
 
                 <div class="row">
-                    <input type="text" onkeydown="isInputLetter(event)" placeholder="First name">
-                    <input type="text" placeholder="Last name">
+                    <input type="text" onkeydown="isInputLetter(event)" placeholder="First name" required>
+                    <input type="text" onkeydown="isInputLetter(event)" placeholder="Last name" required>
                 </div>
 
-                <input type="text" placeholder="Username">
+                <input type="text" placeholder="Username" required>
 
                 <div class="gender">
                     Gender:
-                    <label><input type="radio" name="gender"> Male</label>
+                    <label><input type="radio" name="gender"required> Male</label>
                     <label><input type="radio" name="gender"> Female</label>
                     <label><input type="radio" name="gender"> Other</label>
                 </div>
 
-                <input type="text" id="birthdate" placeholder="Birthdate: MM/DD/YYYY" maxlength="10">
+                <input type="text" id="birthdate" placeholder="Birthdate: MM/DD/YYYY" maxlength="10" required>
 
-                <input type="password" placeholder="Password" id="password" required>
-                <input type="password" placeholder="Confirm Password" id="confirm_password" required>
+                <input type="password" placeholder="Password" id="password" minlength="8" maxlength="20" required>
+                <input type="password" placeholder="Confirm Password" id="confirm_password" minlength="8" maxlength="20" required>
  
-                </div>
             </div>
 
             <!-- RIGHT BOX -->
             <div class="right">
                 <h2>Contact Details</h2>
 
-                <input type="text" placeholder="Address">
+                <input type="text" placeholder="Address" required>
 
                 <div class="row">
-                <input type="text" placeholder="Country">
-                <input type="text" placeholder="Zip Code">
+                <input type="text" placeholder="Country" required>
+                <input type="text" placeholder="Zip Code" required>
                 </div>
 
 
                 <div class="row">
-                <input type="text" placeholder="Code +">
-                <input type="text" placeholder="Phone Number">
+                <input type="text" placeholder="Code +" required>
+                <input type="text" onkeydown="isInputNumber(event)" placeholder="Phone Number" required>
                 </div>
 
-                <input type="email" placeholder="Your Email">
+                <input type="email" placeholder="Your Email" required>
 
                 <div class="checkbox">
                 <label>
-                    <input type="checkbox"> I accept the Terms and Conditions
+                    <input type="checkbox" required> I accept the Terms and Conditions
                 </label>
                 <label>
-                    <input type="checkbox"> Receive Notifications and Offers
+                    <input type="checkbox"> Receive Notifications and Offers (Optional)
                 </label>
                 </div>
 
-                <button type="submit">Register</button>
+                <button type="button" onclick="submitForm()">Register</button>
             </div>
 
         </form>
